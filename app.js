@@ -9,9 +9,9 @@ const query3 = 'UPDATE account SET amount = amount - 200 WHERE client_name=$1';
 
 const name = 'Nik';
 db.tx(t =>  {
-    const q1 = db.none(query1, [shortid.generate(), name, 'KLM 1382', 'KBP', 'AMS', '01/05/2015']);
-    const q2 = db.none(query2, [shortid.generate(), name, 'Hilton', '01/05/2015', '07/05/2015']);
-    const q3 = db.none(query3, [name])
+    const q1 = t.none(query1, [shortid.generate(), name, 'KLM 1382', 'KBP', 'AMS', '01/05/2015']);
+    const q2 = t.none(query2, [shortid.generate(), name, 'Hilton', '01/05/2015', '07/05/2015']);
+    const q3 = t.none(query3, [name])
     return t.batch([q1, q2, q3]);
 }).then(data => { data })
 .catch(error => {
