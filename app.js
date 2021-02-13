@@ -1,4 +1,3 @@
-//console.log("hello world!");
 const pgp = require('pg-promise')();
 const shortid = require('shortid');
 
