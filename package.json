@@ -1,0 +1,15 @@
+{
+  "name": "2pc",
+  "version": "1.0.0",
+  "description": "2pc implementation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg-promise": "^10.9.2",
+    "shortid": "^2.2.16"
+  }
+}
